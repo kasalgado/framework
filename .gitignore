@@ -1,0 +1,5 @@
+nbproject/*
+application/views/templates_c/*
+application/views/cache/*
+application/views/configs/*
+library/Smarty/*

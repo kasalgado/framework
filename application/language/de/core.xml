@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<core>
+    <default>
+        <web_title><![CDATA[Web Titel]]></web_title>
+        <head_titel><![CDATA[Titel HTML]]></head_titel>
+        <head_description><![CDATA[Beschreibung HTML]]></head_description>
+        <head_keywords><![CDATA[Schlüsswörter HTML]]></head_keywords>
+        <head_lang><![CDATA[Sprache HTML]]></head_lang>
+        
+        <monday><![CDATA[Montag]]></monday>
+        <tuesday><![CDATA[Dienstag]]></tuesday>
+        <wednesday><![CDATA[Mittwoch]]></wednesday>
+        <thursday><![CDATA[Donnerstag]]></thursday>
+        <friday><![CDATA[Freitag]]></friday>
+        <saturday><![CDATA[Samstag]]></saturday>
+        <sunday><![CDATA[Sonntag]]></sunday>
+
+        <january><![CDATA[Januar]]></january>
+        <february><![CDATA[Februar]]></february>
+        <march><![CDATA[März]]></march>
+        <april><![CDATA[April]]></april>
+        <may><![CDATA[Mai]]></may>
+        <june><![CDATA[Juni]]></june>
+        <july><![CDATA[Juli]]></july>
+        <august><![CDATA[August]]></august>
+        <september><![CDATA[September]]></september>
+        <october><![CDATA[Oktober]]></october>
+        <november><![CDATA[November]]></november>
+        <december><![CDATA[Dezember]]></december>
+    </default>
+</core>

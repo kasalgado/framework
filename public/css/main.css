@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+
+html {
+    background-color: #eee;
+    color: #333;
+    font-family: Verdana, Arial;
+    font-size: 0.8em;
+    height: 100%;
+}
+
+a {
+    color: #369;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+.header {
+    border-bottom: 1px solid black;
+    height: 20px;
+    text-align: right;
+    width: 100%;
+}
+
+.wraper {
+    background-color: white;
+    padding: 20px;
+}
+
+.wraper .content {
+    background-color: white;
+    clear: both;
+    width: 100%;
+}
+
+.footer {
+    border-top: 1px solid black;
+    font-size: 0.8em;
+    height: 30px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
