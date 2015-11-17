@@ -1,7 +1,8 @@
 <?php
 
 /**
- * 
+ * This class tries to hide the elementare server variables to manage sessions
+ * through simple functions.
  * 
  * @copyright KASalgado 2011 - 2015
  * @author Kleber Salgado
