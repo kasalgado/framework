@@ -3,3 +3,4 @@ application/views/templates_c/*
 application/views/cache/*
 application/views/configs/*
 library/Smarty/*
+application/utils/setup/config.xml

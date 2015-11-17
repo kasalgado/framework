@@ -10,11 +10,6 @@
 abstract class Master
 {
     /**
-     * Create a DB connection object
-     */
-    protected $model;
-
-    /**
      * Create an object to save the additional JavaScript file
      */
     public $jsFile;
@@ -23,21 +18,6 @@ abstract class Master
      * Create an object to save the additional CSS file
      */
     public $cssFile;
-
-    /**
-     * Create an object to load the file version class
-     */
-    protected $fileVersion;
-
-    /**
-     * Create an object to load the utils class
-     */
-    protected $utils;
-    
-    /**
-     * Create an object to load smarty class
-     */
-    protected $smarty;
 
     /**
      * 

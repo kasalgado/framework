@@ -24,7 +24,6 @@ class Init
         define('APPLICATION_USERNAME', $setup['username']);
         define('APPLICATION_PASSWORD', $setup['password']);
         define('APPLICATION_MYSQL_DB', $setup['db']);
-        define('APPLICATION_BASENAME', $setup['basename']);
 
         if ($setup['errors'] != 0) {
             error_reporting(E_ALL);

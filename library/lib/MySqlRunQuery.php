@@ -14,17 +14,17 @@ class MySqlRunQuery extends DBHandler implements Singleton
     /**
      * Create an instance object 
      */
-    private static $_instance = null;
+    private static $instance = null;
 
     /**
      * Create a prepared statement object
      */
-    private $_prepare;
+    private $prepare;
     
     /**
      * MySQL resource object
      */
-    private $_conn;
+    private $conn;
 
     /**
      * Provides an only instance for this class
@@ -32,11 +32,11 @@ class MySqlRunQuery extends DBHandler implements Singleton
      */
     public static function getInstance()
     {
-        if (self::$_instance == null) {
-            self::$_instance = new self;
+        if (self::$instance == null) {
+            self::$instance = new self;
         }
 
-        return self::$_instance;
+        return self::$instance;
     }
 
     /**
@@ -48,11 +48,11 @@ class MySqlRunQuery extends DBHandler implements Singleton
      */
     private function checkSQL($query, array $params)
     {
-        $this->_conn = $this->PDO_MySQL();
-        $this->_prepare = $this->_conn->prepare($query);
+        $this->conn = $this->PDO_MySQL();
+        $this->prepare = $this->conn->prepare($query);
 
-        if (!$data = $this->_prepare->execute($params)) {
-            $error = $this->_prepare->errorInfo();
+        if (!$data = $this->prepare->execute($params)) {
+            $error = $this->prepare->errorInfo();
             throw new Exception($error[2]);
         }
 
@@ -75,11 +75,11 @@ class MySqlRunQuery extends DBHandler implements Singleton
 
             switch ($action) {
                 case 'fetchRow':
-                    $data = $this->_prepare->fetch(PDO::FETCH_ASSOC);
+                    $data = $this->prepare->fetch(PDO::FETCH_ASSOC);
                     break;
 
                 case 'fetchAll':
-                    $data = $this->_prepare->fetchAll(PDO::FETCH_ASSOC);
+                    $data = $this->prepare->fetchAll(PDO::FETCH_ASSOC);
                     break;
             }
         } catch (Exception $e) {
@@ -111,6 +111,6 @@ class MySqlRunQuery extends DBHandler implements Singleton
      */
     public function lastInsertedId()
     {
-        return $this->_conn->lastInsertId();
+        return $this->conn->lastInsertId();
     }
 }
