@@ -4,7 +4,7 @@
     <production>
         <server>localhost</server>
         <username>root</username>
-        <password>mysql1012</password>
+        <password>xxxxxx</password>
         <db>project</db>
         <errors>0</errors>
     </production>
@@ -12,7 +12,7 @@
     <development>
         <server>localhost</server>
         <username>root</username>
-        <password>mysql1012</password>
+        <password>xxxxxx</password>
         <db>project_test</db>
         <errors>1</errors>
     </development>
