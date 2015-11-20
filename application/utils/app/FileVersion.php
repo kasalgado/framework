@@ -15,6 +15,7 @@ class FileVersion
     private $cssFiles = array(
         'start' => 0,
         'javascript' => 0,
+        'mysql' => 0,
     );
 
     /**
@@ -23,6 +24,7 @@ class FileVersion
     private $jsFiles = array(
         'start' => 0,
         'javascript' => 0,
+        'mysql' => 0,
     );
 
     /**

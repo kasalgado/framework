@@ -4,16 +4,16 @@
     <production>
         <server>localhost</server>
         <username>root</username>
-        <password>xxxxxx</password>
-        <db>project</db>
+        <password>mysql1012</password>
+        <db>framework</db>
         <errors>0</errors>
     </production>
 	
     <development>
         <server>localhost</server>
         <username>root</username>
-        <password>xxxxxx</password>
-        <db>project_test</db>
+        <password>mysql1012</password>
+        <db>framework_test</db>
         <errors>1</errors>
     </development>
 </public>

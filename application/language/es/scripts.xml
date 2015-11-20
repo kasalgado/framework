@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <public>
     <default>
+        <contact>
+            <support><![CDATA[Soporte]]></support>
+            <report><![CDATA[Reporte]]></report>
+        </contact>
     </default>
 </public>

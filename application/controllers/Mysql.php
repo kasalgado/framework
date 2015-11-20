@@ -10,20 +10,41 @@
 class Mysql extends Master
 {
     /**
+     *
+     * 
+     * @var object
+     */
+    private $db;
+    
+    /**
      * Load the necessary resources for this page
      */
     public function __construct()
     {
-        $this->loadResources('start');
+        $this->loadResources('mysql');
+        $this->db = MySqlRunQuery::getInstance();
     }
 
     /**
      * 
      * 
-     * @param array $data
-     * @return array
+     * @return array $data
      */
     public function index()
+    {
+        $query = "SELECT * FROM user WHERE email LIKE ?";
+        $params = array('%test.de');
+        $data = $this->db->run($query, $params, 'fetchAll');
+        
+        return array(
+            'users' => $data,
+            'js' => array(
+                'url' => APPLICATION_BASENAME . '?ctr=mysqlAdd',
+            ),
+        );
+    }
+    
+    public function add()
     {
         return array();
     }

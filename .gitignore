@@ -4,3 +4,4 @@ application/views/cache/*
 application/views/configs/*
 library/Smarty/*
 application/utils/setup/config.xml
+/library/Smarty-2.6.28/

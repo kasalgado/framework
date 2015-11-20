@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <public>
     <default>
-        <nav_start><![CDATA[Inicio]]></nav_start>
+        <start><![CDATA[Inicio]]></start>
+        <javascript><![CDATA[JavaScript]]></javascript>
+        <mysql><![CDATA[MySQL]]></mysql>
+        <contact><![CDATA[Contacto]]></contact>
+        
+        <username><![CDATA[Usuario]]></username>
+        <email><![CDATA[Correo]]></email>
+        <active><![CDATA[Activo]]></active>
+        
+        <firstname><![CDATA[Nombre]]></firstname>
+        <lastname><![CDATA[Apellido]]></lastname>
+        <subject><![CDATA[Asunto]]></subject>
+        <text><![CDATA[Texto]]></text>
+        <captcha><![CDATA[Captcha]]></captcha>
+        <code><![CDATA[Código]]></code>
     </default>
 </public>

@@ -39,9 +39,9 @@ if (count($argv) == 1) {
         
         case 'schema:update':
             $db = MySqlRunQuery::getInstance();
-            $query = Update::Users();
+            $query = Update::Run();
             $db->run($query);
-            echo "Database schema was created successfully!\n";
+            echo "Database schema was update successfully!\n";
             break;
 
         default:

@@ -9,14 +9,19 @@
  */
 class Update
 {
+    /**
+     * 
+     * 
+     * @return string
+     */
     public static function Run()
     {
-        $tables = array(
-            self::User(),
-            self::Info(),
+        $updates = array(
+            self::addUser1(),
+            self::addUser2(),
         );
         
-        return implode('; ', $tables);
+        return implode('; ', $updates);
     }
     
     /**
@@ -24,15 +29,23 @@ class Update
      * 
      * @return string $query
      */
-    public static function User()
+    public static function addUser1()
     {
-        $query = 'CREATE TABLE IF NOT EXISTS user (
-            id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-            username VARCHAR(32) NOT NULL,
-            email VARCHAR(64) NOT NULL,
-            password CHAR(32) NOT NULL,
-            UNIQUE (username, email)
-        ) CHARSET utf8 COLLATE utf8_general_ci';
+        $query = "INSERT INTO `user` (username, email, active)
+            VALUES ('kasalgado', 'it@test.de', true)";
+        
+        return $query;
+    }
+    
+    /**
+     * 
+     * 
+     * @return string $query
+     */
+    public static function addUser2()
+    {
+        $query = "INSERT INTO `user` (username, email, active)
+            VALUES ('kronos', 'info@test.de', false)";
         
         return $query;
     }

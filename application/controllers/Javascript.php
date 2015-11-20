@@ -27,7 +27,10 @@ class Javascript extends Master
     {
         return array(
             'name' => 'Kleber',
-            'js_name' => 'KAS',
+            'js' => array(
+                'basename' => APPLICATION_BASENAME . '?ctr=ajaxCommander',
+                'js_name' => 'KAS',
+            )
         );
     }
     

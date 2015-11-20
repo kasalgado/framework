@@ -16,7 +16,7 @@ class SmartyMachine
     public function loadSmarty()
     {
         // Load the Smarty machine
-        require_once APPLICATION_PATH . '/../library/Smarty/Smarty.class.php';
+        require_once APPLICATION_PATH . '/../library/Smarty-2.6.28/Smarty.class.php';
         $smarty = new Smarty();
 
         $smarty->template_dir = APPLICATION_PATH . '/views/templates';

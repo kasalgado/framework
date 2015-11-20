@@ -20,6 +20,12 @@ class Session
         }
     }
     
+    /**
+     * 
+     * 
+     * @param type $type
+     * @param type $data
+     */
     public function set($type, $data = '')
     {
         if (is_array($type)) {
@@ -31,6 +37,12 @@ class Session
         }
     }
     
+    /**
+     * 
+     * 
+     * @param type $type
+     * @return type
+     */
     public function get($type)
     {
         if (is_array($type)) {
@@ -47,11 +59,22 @@ class Session
         }
     }
     
+    /**
+     * 
+     * 
+     * @param type $name
+     * @return type
+     */
     public function exists($name)
     {
         return isset($_SESSION[$name]) ? true : false;
     }
     
+    /**
+     * 
+     * 
+     * @param type $type
+     */
     public function delete($type)
     {
         if (is_array($type)) {
@@ -63,11 +86,17 @@ class Session
         }
     }
     
+    /**
+     * 
+     */
     public function deleteAll()
     {
         session_unset();
     }
     
+    /**
+     * 
+     */
     public function destroy()
     {
         session_destroy();

@@ -7,30 +7,39 @@
  * @author Kleber Salgado
  * @version 1.2
  */
-class Contact extends Basis
+class Contact extends Master
 {
+    /**
+     *
+     * 
+     * @var type 
+     */
+    private $lang;
+    
     /**
      * Load the necessary resources for this page
      */
     public function __construct()
     {
-        $this->createObjects();
-
-        $fileVersion = $this->_fileVersion->get();
-        $this->loadResources(array(
-            'css' => $fileVersion['css']['posts'],
-            'js' => $fileVersion['js']['posts'])
-        );
+        $this->loadResources('start');
+        $languages = new Languages();
+        $this->lang = $languages->classXML('scripts.xml');
     }
 
     /**
-     * Start the page
+     * 
+     * 
+     * @return type
      */
-    public function index($data = array())
+    public function index()
     {
-        $message = $data['name'] . ' ' . $data['email'] . ' ' . $data['message'];
-        mail('kas_ecu@yahoo.com', 'Contact', $message);
-
-        return $this->_appData;
+        $select = array(
+            $this->lang->contact->support,
+            $this->lang->contact->report,
+        );
+        
+        return array(
+            'select' => $select,
+        );
     }
 }

@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+.col-name li {
+    font-weight: bold;
+}
+
+li {
+    display: inline-block;
+    width: 150px;
+}

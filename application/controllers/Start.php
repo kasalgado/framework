@@ -20,15 +20,9 @@ class Start extends Master
     /**
      * 
      * 
-     * @param array $data
      * @return array
      */
-    public function index($data = array())
-    {
-        return array();
-    }
-    
-    public function test($data = array())
+    public function index()
     {
         return array();
     }

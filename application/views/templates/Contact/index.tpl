@@ -1,12 +1,11 @@
-<div class="mainTitle1 dist2">{$lang_contact}</div>
-<div class="boxDescription dist2">{$lang_contactInfo1}</div>
+<h3>{$lang_contact}</h3>
 
 {if !$sendForm}
     {if $errmsg}<div class="error">{$errmsg}</div>
     {else}<div class="dist2">{$lang_contactInfo}</div>
     {/if}
 
-    <form name="contact" method="post" action="index.php?ctr=contactIndex">
+    <form name="contact" method="post" action="{$basename|cat:'?ctr=contactIndex'}">
         <div class="rowForm">
             <div class="fl labelForm"><label for="firstname">{$lang_firstname}:</label></div>
             <div class="fl"><input class="{if $firstname.error} error{/if}" type="text" name="firstname" value="{$firstname.0}" /></div>
@@ -26,10 +25,10 @@
         </div>
 
         <div class="rowForm">
-            <div class="fl labelForm"><label for="email">{$lang_subject}:</label></div>
+            <div class="fl labelForm"><label for="subject">{$lang_subject}:</label></div>
             <div class="fl">
                 <select class="{if $subject.error} error{/if}" name="subject">
-                    {html_options options=$selectBox selected=$subject.0}
+                    {html_options options=$select}
                 </select>
             </div>
             <div class="clear"></div>
@@ -55,7 +54,7 @@
 
         <div class="rowForm">
             <div class="fl labelForm"><label for="submit">&nbsp;</label></div>
-            <div class="fl"><input type="submit" name="but_sendContact" value="{$lang_send}" /></div>
+            <div class="fl"><input type="submit" name="but_sendContact" value="{$lang_submit}" /></div>
             <div class="clear"></div>
         </div>
     </form>
