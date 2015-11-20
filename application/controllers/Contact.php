@@ -23,7 +23,7 @@ class Contact extends Master
     {
         $this->loadResources('start');
         $languages = new Languages();
-        $this->lang = $languages->classXML('scripts.xml');
+        $this->lang = $languages->getFromFile('classes', 'contact');
     }
 
     /**

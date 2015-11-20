@@ -1,14 +1,18 @@
 <?php
 
 /**
- * This class manages language views on application
  * 
- * @copyright KASalgado 2010 - 2012
+ * 
+ * @copyright KASalgado 2012 - 2015
  * @author Kleber Salgado
  * @version 1.1
  */
 class Languages
 {
+    const DEFAULT_CORE_FILE = 'core';
+    const DEFAULT_PUBLIC_FILE = 'public';
+    const DEFAULT_FILE_EXTENSION = 'xml';
+    
     /**
      *
      * 
@@ -25,66 +29,72 @@ class Languages
     }
     
     /**
-     * Look for the XML file an assign into an array
      * 
-     * @param string $file
-     * @return array $lang
+     * 
+     * @return type
      */
-    public function langXML($file, $path = null)
+    public function setLanguages()
     {
+        $core = $this->xmlToArray(self::DEFAULT_CORE_FILE);
+        $public = $this->xmlToArray(self::DEFAULT_PUBLIC_FILE);
+        
         $lang = array();
-        $absPath = $path ? $path : APPLICATION_PATH;
-        $absPath .= '/language/' . $this->session->get('lang') . '/' . $file;
-
-        if (file_exists($absPath)) {
-            $xmlObjet = simplexml_load_file($absPath);
-
-            foreach ($xmlObjet as $value) {
-                foreach ($value as $name => $text) {
-                    $lang[$name] = $text;
-                }
-            }
-
-            return $lang;
-        } else {
-            return array();
+        foreach (array_merge($core, $public) as $index => $value) {
+            $lang[$index] = $value;
         }
+
+        return $lang;
     }
 
     /**
-     * Look for the XML file an assign it to an array
      * 
-     * @param string $fileName
-     * @return XML array $xmlObject
+     * 
+     * @param type $file
+     * @param type $child
+     * @return \stdClass
+     * @throws Exception
      */
-    public function classXML($file)
+    public function getFromFile($file, $child = '')
     {
         $lang = new stdClass();
-        $path = APPLICATION_PATH . '/language/' . $this->session->get('lang') . '/' . $file;
+        $path = APPLICATION_PATH . '/language/' . $this->session->get('lang') . '/' . $file . '.xml';
 
-        if (file_exists($path)) {
-            $xmlObjet = simplexml_load_file($path);
-            
-            foreach ($xmlObjet as $value) {
-                foreach ($value as $name => $text) {
-                    $lang->$name = $text;
-                }
-            }
-
-            return $lang;
-        } else {
+        if (!file_exists($path)) {
             throw new Exception('File ' . $file . ' does not exists.');
         }
+        
+        $xml = simplexml_load_file($path);
+
+        if ($child) {
+            foreach ($xml->$child as $index => $value) {
+                $lang->$index = $value;
+            }
+        } else {
+            foreach ($xml as $index => $value) {
+                $lang->$index = $value;
+            }
+        }
+
+        return $lang;
     }
 
     /**
-     * Prepare the language files to be showed as only one array
      * 
-     * @param array $files
-     * @return array $lang
+     * 
+     * @param type $name
+     * @return type
      */
-    public function prepare($file = array())
+    private function xmlToArray($name)
     {
-        return array_merge($this->langXML('core.xml'), $this->langXML('public.xml'));
+        $path = APPLICATION_PATH . '/language/' . $this->session->get('lang') . '/';
+        
+        return json_decode(
+            json_encode(
+                (array) simplexml_load_file($path . $name . '.' . self::DEFAULT_FILE_EXTENSION,
+                'SimpleXMLElement',
+                LIBXML_NOCDATA)
+            ),
+            1
+        );
     }
 }

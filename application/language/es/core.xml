@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <core>
-    <default>
-        <web_title><![CDATA[Título del Web]]></web_title>
-        <head_titel><![CDATA[Título HTML]]></head_titel>
-        <head_description><![CDATA[Descripción HTML]]></head_description>
-        <head_keywords><![CDATA[Palabras claves HTML]]></head_keywords>
-        <head_lang><![CDATA[Lenguaje HTML]]></head_lang>
-        <copyright><![CDATA[@Copyright KASalgado 2012 - 2015]]></copyright>
-        
-        <new><![CDATA[Nuevo]]></new>
-        <submit><![CDATA[Enviar]]></submit>
-    </default>
+    <web_title><![CDATA[Título del Web]]></web_title>
+    <head_titel><![CDATA[Título HTML]]></head_titel>
+    <head_description><![CDATA[Descripción HTML]]></head_description>
+    <head_keywords><![CDATA[Palabras claves HTML]]></head_keywords>
+    <head_lang><![CDATA[Lenguaje HTML]]></head_lang>
+    <copyright><![CDATA[@Copyright KASalgado 2012 - 2015]]></copyright>
+
+    <new><![CDATA[Nuevo]]></new>
+    <submit><![CDATA[Enviar]]></submit>
 </core>

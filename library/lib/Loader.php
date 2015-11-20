@@ -9,10 +9,23 @@
  */
 class Loader {
     
+    /**
+     *
+     * 
+     * @var type 
+     */
     private $smarty;
     
+    /**
+     *
+     * 
+     * @var type 
+     */
     private $vars;
     
+    /**
+     * 
+     */
     public function __construct()
     {
         $smartyMachine = new SmartyMachine();
@@ -20,6 +33,9 @@ class Loader {
         $this->vars = new Vars();
     }
 
+    /**
+     * 
+     */
     public function get() {
         $this->smarty->assign('basename', APPLICATION_BASENAME);
         $this->setLangVars();
@@ -38,6 +54,11 @@ class Loader {
         }
     }
     
+    /**
+     * 
+     * 
+     * @return string
+     */
     private function getTemplate()
     {
         $data = array('ctr' => 'startIndex');
@@ -74,6 +95,12 @@ class Loader {
         return 'index.tpl';
     }
     
+    /**
+     * 
+     * 
+     * @return type
+     * @throws Exception
+     */
     private function getAjaxTemplate()
     {
         foreach ($this->vars->isPost() as $key => $value) {
@@ -109,6 +136,9 @@ class Loader {
         }
     }
     
+    /**
+     * 
+     */
     private function loadResources()
     {
         $loadResources = new LoadResourceFiles();
@@ -116,10 +146,13 @@ class Loader {
         $this->smarty->assign('jsFiles', $loadResources->loadJsFiles());
     }
     
+    /**
+     * 
+     */
     private function setLangVars()
     {
         $languages = new Languages();
-        $lang = $languages->prepare();
+        $lang = $languages->setLanguages();
 
         foreach ($lang as $key => $value) {
             $this->smarty->assign('lang_' . $key, $value);
