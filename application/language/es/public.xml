@@ -9,11 +9,11 @@
     <username><![CDATA[Usuario]]></username>
     <email><![CDATA[Correo]]></email>
     <active><![CDATA[Activo]]></active>
-
+    
     <firstname><![CDATA[Nombre]]></firstname>
     <lastname><![CDATA[Apellido]]></lastname>
+    <phone><![CDATA[Teléfono]]></phone>
     <subject><![CDATA[Asunto]]></subject>
     <text><![CDATA[Texto]]></text>
-    <captcha><![CDATA[Captcha]]></captcha>
-    <code><![CDATA[Código]]></code>
+    <success><![CDATA[Formulario enviado con éxito]]></success>
 </public>

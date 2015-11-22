@@ -2,6 +2,7 @@
 
 <public>
     <contact>
+        <subject><![CDATA[Seleccione un asunto]]></subject>
         <support><![CDATA[Soporte]]></support>
         <report><![CDATA[Reporte]]></report>
     </contact>

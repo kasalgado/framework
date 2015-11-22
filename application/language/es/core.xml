@@ -10,4 +10,11 @@
 
     <new><![CDATA[Nuevo]]></new>
     <submit><![CDATA[Enviar]]></submit>
+    
+    <form_errors>
+        <empty><![CDATA[Este campo no debe estar vacío]]></empty>
+        <email><![CDATA[El formato de correo está incorrecto]]></email>
+        <text><![CDATA[El valor debe ser solo caracteres alfabéticos]]></text>
+        <select><![CDATA[Debe seleccionar un valor]]></select>
+    </form_errors>
 </core>

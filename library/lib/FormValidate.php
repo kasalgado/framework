@@ -10,138 +10,119 @@
 class FormValidate
 {
     /**
+     *
+     * 
+     * @var type 
+     */
+    private $lang;
+    
+    /**
+     *
+     * 
+     * @var type 
+     */
+    private $data;
+    
+    /**
+     *
+     * 
+     * @var type 
+     */
+    private $validate = array();
+    
+    /**
      * 
      * 
      * @param array $data
      */
-    public function checkFields($data)
+    public function __construct(array $data)
     {
-        foreach ($data as $key => $value) {
+        $languages = new Languages();
+        $this->lang = $languages->getFromFile('core', 'form_errors');
+        $this->data = $data;
+    }
+    
+    /**
+     * 
+     * 
+     * @param array $data
+     */
+    public function checkFields($validate)
+    {
+        foreach ($validate as $name => $type) {
+            switch ($type) {
+                case 'email':
+                    $this->email($name);
+                    continue;
+                    break;
+                
+                case 'text':
+                    $this->text($name);
+                    continue;
+                    break;
+                
+                case 'select':
+                    $this->select($name);
+                    continue;
+                    break;
+            }
+            
+            $this->required($name);
             
         }
         
-        if (isset($data['errmsg'])) {
-            $data['errForm'] = true;
-        }
-
-        return $data;
+        return $this->validate;
     }
     
-    public function checkRequiredFields()
+    /**
+     * 
+     * 
+     * @param type $value
+     */
+    public function required($value)
     {
-        if ($value[0] == null && $value[1] == true) {
-            $data[$key] = array($value[0], 'error' => true);
-            $data['errmsg'] = $lang->emptyFields;
-        }
-    }
-    
-    public function checkEmail()
-    {
-        if ($value[2] == 'email') {
-            if (!preg_match('^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-.]?[0-9a-zA-Z])*\\.[a-zA-Z]{2,4}$^', $value[0])) {
-                $data[$key] = array($value[0], 'error' => true);
-                if (!isset($data['errmsg']))
-                    $data['errmsg'] = $lang->noEmail;
-            }
+        if ($this->data[$value] == null) {
+            $this->validate[$value]['error'] = $this->lang->form_errors->empty;
+            $this->validate['failed'] = true;
         }
     }
     
-    public function checkString()
+    /**
+     * 
+     * 
+     * @param type $value
+     */
+    public function email($value)
     {
-        if ($value[2] == 'string') {
-            if (!preg_match('/^./', $value[0])) {  // @TODO: Check the correct format
-                $data[$key] = array($value[0], 'error' => true);
-                if (!isset($data['errmsg']))
-                    $data['errmsg'] = $lang->onlyString;
-            }
+        if (!preg_match('^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-.]?[0-9a-zA-Z])*\\.[a-zA-Z]{2,4}$^', $this->data[$value])) {
+            $this->validate[$value]['error'] = $this->lang->form_errors->email;
+            $this->validate['failed'] = true;
         }
     }
     
-    public function checkText()
+    /**
+     * 
+     * 
+     * @param type $value
+     */
+    public function text($value)
     {
-        if ($value[2] == 'text') {
-            if (!preg_match('/^[a-zA-Z]/', $value[0])) {
-                $data[$key] = array($value[0], 'error' => true);
-                if (!isset($data['errmsg']))
-                    $data['errmsg'] = $lang->onlyText;
-            }
+        if (!preg_match('/^[a-zA-Z]+$/', $this->data[$value])) {
+            $this->validate[$value]['error'] = $this->lang->form_errors->text;
+            $this->validate['failed'] = true;
         }
     }
     
-    public function checkDate()
+    /**
+     * 
+     * 
+     * @param type $value
+     */
+    public function select($value)
     {
-        if ($value[2] == 'date') {
-            if (!preg_match('/^[0-9]{2}+\.[0-9]{2}+\.[0-9]{4}/', $value[0])) {
-                $data[$key] = array($value[0], 'error' => true);
-                if (!isset($data['errmsg']))
-                    $data['errmsg'] = $lang->onlyDate;
-            }
-        }
-    }
-    
-    public function checkPassword()
-    {
-        if ($value[2] == 'pw') {
-            if (!preg_match('/^[a-zA-Z0-9]{5,}/', $value[0])) {
-                $data[$key] = array($value[0], 'error' => true);
-                if (!isset($data['errmsg']))
-                    $data['errmsg'] = $lang->tooShort;
-            }
-        }
-    }
-    
-    public function checkPasswordIdentical()
-    {
-        if ($value[2] == 'pwa') {
-            if ($value[0] != $data['pw'][0]) {
-                $data[$key] = array($value[0], 'error' => true);
-                if (!isset($data['errmsg']))
-                    $data['errmsg'] = $lang->noEqualPw;
-            }
-        }
-    }
-    
-    public function checkCaptcha()
-    {
-        if ($value[2] == 'captcha') {
-            if ($data['code'][0] != $_SESSION['cptCode']) {
-                $data['code'] = array($value[0], 'error' => true);
-                if (!isset($data['errmsg']))
-                    $data['errmsg'] = $lang->noCaptcha;
-            }
-        }
-    }
-    
-    public function checkZip()
-    {
-        if ($value[2] == 'postCode') {
-            if (!preg_match('/^[0-9]{5}/', $value[0])) {
-                $data[$key] = array($value[0], 'error' => true);
-                if (!isset($data['errmsg']))
-                    $data['errmsg'] = $lang->noPostCode;
-            }
-        }
-    }
-    
-    public function checkSpaces()
-    {
-        if ($value[2] == 'oneWord') {
-            if (strstr($value[0], ' ')) {
-                $data[$key] = array($value[0], 'error' => true);
-                if (!isset($data['errmsg']))
-                    $data['errmsg'] = $lang->noSpaces;
-            }
-        }
-    }
-    
-    public function checkSelected()
-    {
-        if ($value[2] == 'select') {
-            if (!$value[0]) {
-                $data[$key] = array($value[0], 'error' => true);
-                if (!isset($data['errmsg']))
-                    $data['errmsg'] = $lang->noSelect;
-            }
+        if (!$this->data[$value]) {
+            $this->validate[$value]['error'] = $this->lang->form_errors->select;
+            $this->validate['failed'] = true;
         }
     }
 }

@@ -1,14 +1,27 @@
 <?php
 
 /**
- * This class manages the contact form in blog
  * 
- * @copyright KASalgado 2012
+ * 
+ * @copyright KASalgado 2012 - 2015
  * @author Kleber Salgado
  * @version 1.2
  */
 class Contact extends Master
 {
+    /**
+     * Hold fields for validate form
+     * 
+     * @var type 
+     */
+    private $validate = array(
+        'firstname' => 'text',
+        'lastname' => 'text',
+        'email' => 'email',
+        'subject' => 'select',
+        'text' => '',
+    );
+    
     /**
      *
      * 
@@ -31,15 +44,28 @@ class Contact extends Master
      * 
      * @return type
      */
-    public function index()
+    public function index($data)
     {
-        $select = array(
-            $this->lang->contact->support,
-            $this->lang->contact->report,
+        $result = array(
+            'data' => $data,
+            'select' => array(
+                $this->lang->contact->subject,
+                $this->lang->contact->support,
+                $this->lang->contact->report,
+            ),
         );
         
-        return array(
-            'select' => $select,
-        );
+        $vars = new Vars();
+        if ($vars->isPost()) {
+            $form = new FormValidate($data);
+            $validate = $form->checkFields($this->validate);
+            if (isset($validate['failed'])) {
+                $result['validate'] = $validate;
+            } else {
+                $result['success'] = true;
+            }
+        }
+        
+        return $result;
     }
 }
