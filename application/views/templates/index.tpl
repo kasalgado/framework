@@ -15,17 +15,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {$cssFiles}
-        {$cssFile}
-        {if isset( $cssLibrary ) }{$cssLibrary}{/if}
+        {$css}
+        {$cssApp}
     </head>
 
     <body id="page-top" class="index">
         {include file="header.tpl"}
         {include file=$template}
-        {$jsFiles}
         {include file="footer.tpl"}
-        {$jsFile}
-        {if isset( $jsLibrary ) }{$jsLibrary}{/if}
+        {$js}
+        {$jsApp}
     </body>
 </html>

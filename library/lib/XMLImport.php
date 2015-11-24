@@ -16,16 +16,15 @@ class XMLImport
      */
     public function getContent($file)
     {
-        $xml = $content = array();
-
         $xmlObjet = simplexml_load_file(APPLICATION_PATH . '/utils/' . $file);
-
+        $content = array();
+        
         foreach ($xmlObjet as $index => $value) {
             foreach ($value as $name => $text) {
-                $xml[$index][$name] = $text;
+                $content[$index][$name] = $text;
             }
         }
 
-        return $xml;
+        return $content;
     }
 }

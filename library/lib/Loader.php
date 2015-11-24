@@ -79,8 +79,8 @@ class Loader {
         $controller = $dispatcher->setController($data);
 
         // Create variables to assign CSS and JS resources
-        $this->smarty->assign('jsFile', $controller['js']);
-        $this->smarty->assign('cssFile', $controller['css']);
+        $this->smarty->assign('jsApp', $controller['js']);
+        $this->smarty->assign('cssApp', $controller['css']);
 
         // Create variable to assign the template
         $this->smarty->assign('template', $dispatcher->loadTemplate());
@@ -141,9 +141,9 @@ class Loader {
      */
     private function loadResources()
     {
-        $loadResources = new LoadResourceFiles();
-        $this->smarty->assign('cssFiles', $loadResources->loadCssFiles());
-        $this->smarty->assign('jsFiles', $loadResources->loadJsFiles());
+        $loadResources = new LoadResources();
+        $this->smarty->assign('css', $loadResources->css());
+        $this->smarty->assign('js', $loadResources->js());
     }
     
     /**

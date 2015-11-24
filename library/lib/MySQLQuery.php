@@ -9,7 +9,7 @@
  * @author Kleber Salgado
  * @version 1.2
  */
-class MySqlRunQuery extends DBHandler implements Singleton
+class MySQLQuery extends MySQLHandler implements Singleton
 {
     /**
      * Create an instance object 

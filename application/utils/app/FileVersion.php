@@ -12,7 +12,7 @@ class FileVersion
     /**
      * Object to manage CSS files
      */
-    private $cssFiles = array(
+    private $css = array(
         'start' => 0,
         'javascript' => 0,
         'mysql' => 0,
@@ -21,7 +21,7 @@ class FileVersion
     /**
      * Object to manage JS files
      */
-    private $jsFiles = array(
+    private $js = array(
         'start' => 0,
         'javascript' => 0,
         'mysql' => 0,
@@ -34,8 +34,8 @@ class FileVersion
     public function get($class)
     {
         return array(
-            'css' => $this->cssFiles[$class],
-            'js' => $this->jsFiles[$class],
+            'css' => $this->css[$class],
+            'js' => $this->js[$class],
         );
     }
 }

@@ -3,14 +3,14 @@
 <ul class="col-name">
     <li>{$lang_username}</li>
     <li>{$lang_email}</li>
-    <li>{$lang_active}</li>
+    <li>{$lang_status}</li>
 </ul>
     
 {foreach from=$users item=user}
     <ul>
         <li>{$user.username}</li>
         <li>{$user.email}</li>
-        <li>{$user.active}</li>
+        <li>{if $user.active}{$lang_enable}{else}{$lang_disable}{/if}</li>
     </ul>
 {/foreach}
 

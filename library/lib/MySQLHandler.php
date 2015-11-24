@@ -7,7 +7,7 @@
  * @author Kleber Salgado
  * @version 1.0
  */
-abstract class DBHandler
+abstract class MySQLHandler
 {
     /**
      * Create a MySQL connection through a PDO handler. The conection parameters

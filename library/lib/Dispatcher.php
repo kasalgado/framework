@@ -35,8 +35,8 @@ class Dispatcher
         $data = array('vars' => $vars);
         
         if (!isset($params['response'])) {
-            $data['js'] = $loadClass->jsFile;
-            $data['css'] = $loadClass->cssFile;
+            $data['js'] = $loadClass->js;
+            $data['css'] = $loadClass->css;
         }
         
         return $data;

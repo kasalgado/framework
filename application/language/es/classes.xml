@@ -6,4 +6,9 @@
         <support><![CDATA[Soporte]]></support>
         <report><![CDATA[Reporte]]></report>
     </contact>
+    
+    <mysql>
+        <enable><![CDATA[Activo]]></enable>
+        <disable><![CDATA[Inactivo]]></disable>
+    </mysql>
 </public>

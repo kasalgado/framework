@@ -10,6 +10,11 @@
 
     <new><![CDATA[Nuevo]]></new>
     <submit><![CDATA[Enviar]]></submit>
+    <add><![CDATA[Anadir]]></add>
+    <username><![CDATA[Usuario]]></username>
+    <status><![CDATA[Estado]]></status>
+    <enable><![CDATA[Activo]]></enable>
+    <disable><![CDATA[Inactivo]]></disable>
     
     <form_errors>
         <empty><![CDATA[Este campo no debe estar vacío]]></empty>

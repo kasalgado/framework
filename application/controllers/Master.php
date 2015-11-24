@@ -12,12 +12,12 @@ abstract class Master
     /**
      * Create an object to save the additional JavaScript file
      */
-    public $jsFile;
+    public $js;
 
     /**
      * Create an object to save the additional CSS file
      */
-    public $cssFile;
+    public $css;
 
     /**
      * 
@@ -26,12 +26,12 @@ abstract class Master
     protected function loadResources($class)
     {
         $fileVersion = new FileVersion();
-        $files = $fileVersion->get($class);
+        $version = $fileVersion->get($class);
         
-        if ($files) {
-            $resources = new LoadResourceFiles();
-            $this->jsFile = $resources->loadJsFile($class, $files['js']);
-            $this->cssFile = $resources->loadCssFile($class, $files['css']);
+        if ($version) {
+            $resources = new LoadResources();
+            $this->js = $resources->jsApp($class, $version['js']);
+            $this->css = $resources->cssApp($class, $version['css']);
         }
     }
 }
