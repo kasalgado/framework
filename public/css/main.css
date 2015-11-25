@@ -1,62 +1,41 @@
 @CHARSET "UTF-8";
 
-html {
+html, body {
     background-color: #eee;
     color: #333;
     font-family: Verdana, Arial;
-    font-size: 0.8em;
     height: 100%;
 }
 
-a {
+h3 {
     color: #369;
-    text-decoration: none;
+    margin: 0 0 20px 0;
 }
 
 .container {
-    margin: 0 auto;
+    background-color: #eee;
+    margin: 20px auto;
     max-width: 1024px;
 }
 
-.header {
-    border-bottom: 1px solid black;
-    height: 20px;
-    text-align: right;
-    width: 100%;
-}
-
 .wraper {
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     background-color: white;
+    min-height: 300px;
     padding: 20px;
 }
 
-.wraper .content {
-    background-color: white;
-    clear: both;
-    width: 100%;
-}
-
 .footer {
-    border-top: 1px solid black;
     font-size: 0.8em;
     height: 30px;
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
     width: 100%;
 }
 
-.hidden {
-    display: none;
-}
-
-.fr {
-    float: right;
-}
-
-.fl {
-    float: left;
-}
-
-.clear {
-    clear: both;
+.danger {
+    color: #900;
+    font-size: 0.8em;
 }

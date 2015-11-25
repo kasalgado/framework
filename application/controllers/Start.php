@@ -24,6 +24,8 @@ class Start extends Master
      */
     public function index()
     {
-        return array();
+        return array(
+            'nav_start' => true,
+        );
     }
 }

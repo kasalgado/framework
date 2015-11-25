@@ -1,21 +1,22 @@
 <h3>{$lang_mysql}</h3>
 
-<ul class="col-name">
-    <li>{$lang_username}</li>
-    <li>{$lang_email}</li>
-    <li>{$lang_status}</li>
-</ul>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>{$lang_username}</th>
+            <th>{$lang_email}</th>
+            <th>{$lang_status}</th>
+        </tr>
+    </thead>
+    {foreach from=$users item=user}
+        <tr>
+            <td>{$user.username}</td>
+            <td>{$user.email}</td>
+            <td>{if $user.active}{$lang_enable}{else}{$lang_disable}{/if}</td>
+        </tr>
+    {/foreach}
+</table>
     
-{foreach from=$users item=user}
-    <ul>
-        <li>{$user.username}</li>
-        <li>{$user.email}</li>
-        <li>{if $user.active}{$lang_enable}{else}{$lang_disable}{/if}</li>
-    </ul>
-{/foreach}
-
-<ul>
-    <li><input type="button" value="{$lang_new}" onclick="callUrl()" /></li>
-</ul>
+<button class="btn btn-primary" onclick="callUrl()">{$lang_new}</button>
 
 {include file='vars.tpl'}

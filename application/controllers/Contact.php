@@ -53,6 +53,7 @@ class Contact extends Master
                 $this->lang->contact->support,
                 $this->lang->contact->report,
             ),
+            'nav_contact' => true,
         );
         
         $vars = new Vars();
@@ -62,6 +63,7 @@ class Contact extends Master
             if (isset($validate['failed'])) {
                 $result['validate'] = $validate;
             } else {
+                // Code for email sending
                 $result['success'] = true;
             }
         }

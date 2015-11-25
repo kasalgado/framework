@@ -2,21 +2,9 @@
 
 {if isset($success)}<h4>{$lang_success}</h4>{/if}
 
-<form name="contact" method="post" action="{$basename|cat:'?ctr=mysqlAdd'}">
-    <label class="fl" for="username">{$lang_username}:*</label>
-    <input class="fl" type="text" name="username" value="{$data.username}" />
-    <div class="clear"></div>
-    {if isset($validate.username)}<div>{$validate.username.error}</div>{/if}
-
-    <label class="fl" for="email">{$lang_email}:*</label>
-    <input class="fl" type="text" name="email" value="{$data.email}" />
-    <div class="clear"></div>
-    {if isset($validate.email)}<div>{$validate.email.error}</div>{/if}
-    
-    <label class="fl" for="status">{$lang_status}:</label>
-    <select class="fl" name="status">{html_options options=$select selected=$data.status}</select>
-    <div class="clear"></div>
-    {if isset($validate.active)}<div>{$validate.active.error}</div>{/if}
-
-    <input type="submit" value="{$lang_add}" />
+<form class="form-horizontal" name="contact" method="post" action="{$basename|cat:'?ctr=mysqlAdd'}">
+    {include file=Form/input.tpl name="username" lang=$lang_username check=true}
+    {include file=Form/input.tpl name="email" lang=$lang_email check=true}
+    {include file=Form/select.tpl name="status" lang=$lang_status}
+    {include file=Form/submit.tpl lang=$lang_add}
 </form>

@@ -60,6 +60,7 @@ class Mysql extends Master
             'js' => array(
                 'url' => APPLICATION_BASENAME . '?ctr=mysqlAdd',
             ),
+            'nav_mysql' => true,
         );
     }
     
@@ -76,6 +77,7 @@ class Mysql extends Master
                 $this->lang->mysql->disable,
                 $this->lang->mysql->enable,
             ),
+            'nav_mysql' => true,
         );
         
         $vars = new Vars();

@@ -15,15 +15,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {$css}
+        {$cssPub}
         {$cssApp}
     </head>
 
-    <body id="page-top" class="index">
-        {include file="header.tpl"}
-        {include file=$template}
-        {include file="footer.tpl"}
-        {$js}
+    <body>
+        <div class="container">
+            <div class="header">{include file="header.tpl"}</div>
+            <div class="wraper">{include file=$template}</div>
+            <div class="footer">{include file="footer.tpl"}</div>
+        </div>
+        {$jsPub}
         {$jsApp}
     </body>
 </html>

@@ -142,8 +142,8 @@ class Loader {
     private function loadResources()
     {
         $loadResources = new LoadResources();
-        $this->smarty->assign('css', $loadResources->css());
-        $this->smarty->assign('js', $loadResources->js());
+        $this->smarty->assign('cssPub', $loadResources->css());
+        $this->smarty->assign('jsPub', $loadResources->js());
     }
     
     /**

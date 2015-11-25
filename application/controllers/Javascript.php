@@ -20,17 +20,17 @@ class Javascript extends Master
     /**
      * 
      * 
-     * @param array $data
      * @return array
      */
-    public function index($data = array())
+    public function index()
     {
         return array(
             'name' => 'Kleber',
             'js' => array(
                 'basename' => APPLICATION_BASENAME . '?ctr=ajaxCommander',
                 'js_name' => 'KAS',
-            )
+            ),
+            'nav_javascript' => true,
         );
     }
     
