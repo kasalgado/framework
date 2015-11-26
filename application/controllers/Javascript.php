@@ -1,16 +1,16 @@
 <?php
 
 /**
- * This class manages the index page in the application
  * 
- * @copyright KASalgado 2012
+ * 
+ * @copyright KASalgado 2012 - 2015
  * @author Kleber Salgado
  * @version 1.2
  */
 class Javascript extends Master
 {
     /**
-     * Load the necessary resources for this page
+     * Load resources
      */
     public function __construct()
     {
@@ -36,30 +36,30 @@ class Javascript extends Master
     /**
      * 
      * 
-     * @param type $data
-     * @return string
+     * @param array $data
+     * @return array $vars
      */
     public function json($data)
     {
-        $result = array(
+        $vars = array(
             'name' => $data['name'],
         );
         
-        return $result;
+        return $vars;
     }
     
     /**
      * 
      * 
-     * @param type $data
-     * @return string
+     * @param array $data
+     * @return array $vars
      */
     public function html($data)
     {
-        $result = array(
+        $vars = array(
             'name' => $data['name'],
         );
         
-        return $result;
+        return $vars;
     }
 }

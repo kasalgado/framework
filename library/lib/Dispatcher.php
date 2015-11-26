@@ -1,11 +1,11 @@
 <?php
 
 /**
- * This class manages class and template loading
  * 
- * @copyright KASalgado 2010 - 2012
+ * 
+ * @copyright KASalgado 2012 - 2015
  * @author Kleber Salgado
- * @version 1.1
+ * @version 1.2
  */
 class Dispatcher
 {

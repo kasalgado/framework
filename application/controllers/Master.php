@@ -21,7 +21,8 @@ abstract class Master
 
     /**
      * 
-     * @param type $class
+     * 
+     * @param string $class
      */
     protected function loadResources($class)
     {
