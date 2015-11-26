@@ -16,6 +16,14 @@
     <enable><![CDATA[Activo]]></enable>
     <disable><![CDATA[Inactivo]]></disable>
     
+    <firstname><![CDATA[Nombre]]></firstname>
+    <lastname><![CDATA[Apellido]]></lastname>
+    <email><![CDATA[Correo]]></email>
+    <phone><![CDATA[Teléfono]]></phone>
+    <subject><![CDATA[Asunto]]></subject>
+    <text><![CDATA[Texto]]></text>
+    <success><![CDATA[Formulario enviado con éxito]]></success>
+    
     <form_errors>
         <empty><![CDATA[Este campo no debe estar vacío]]></empty>
         <email><![CDATA[El formato de correo está incorrecto]]></email>

@@ -5,12 +5,10 @@
     <javascript><![CDATA[JavaScript]]></javascript>
     <mysql><![CDATA[MySQL]]></mysql>
     <contact><![CDATA[Contacto]]></contact>
-
-    <firstname><![CDATA[Nombre]]></firstname>
-    <lastname><![CDATA[Apellido]]></lastname>
-    <email><![CDATA[Correo]]></email>
-    <phone><![CDATA[Teléfono]]></phone>
-    <subject><![CDATA[Asunto]]></subject>
-    <text><![CDATA[Texto]]></text>
-    <success><![CDATA[Formulario enviado con éxito]]></success>
+    
+    <toggle_hidden><![CDATA[Mostrar / Ocultar]]></toggle_hidden>
+    <click_me><![CDATA[Púlsame]]></click_me>
+    <ajax_json><![CDATA[Usar Ajax con JSON]]></ajax_json>
+    <ajax_html><![CDATA[Usar Ajax con HTML]]></ajax_html>
+    <wellcome><![CDATA[Bienvenido]]></wellcome>
 </public>

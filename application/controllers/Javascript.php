@@ -25,7 +25,6 @@ class Javascript extends Master
     public function index()
     {
         return array(
-            'name' => 'Kleber',
             'js' => array(
                 'basename' => APPLICATION_BASENAME . '?ctr=ajaxCommander',
                 'js_name' => 'KAS',
@@ -34,9 +33,32 @@ class Javascript extends Master
         );
     }
     
-    public function ajax($data)
+    /**
+     * 
+     * 
+     * @param type $data
+     * @return string
+     */
+    public function json($data)
     {
-        $result = array('id' => $data['id'], 'string' => 'test....');
+        $result = array(
+            'name' => $data['name'],
+        );
+        
+        return $result;
+    }
+    
+    /**
+     * 
+     * 
+     * @param type $data
+     * @return string
+     */
+    public function html($data)
+    {
+        $result = array(
+            'name' => $data['name'],
+        );
         
         return $result;
     }
