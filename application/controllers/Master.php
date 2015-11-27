@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This class loads the general functions for all application
  * 
- * @copyright KASalgado 2012
+ * 
+ * @copyright KASalgado 2012 - 2015
  * @author Kleber Salgado
  * @version 1.1
  */

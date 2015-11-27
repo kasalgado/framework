@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This class manages the version of resource files for loading 
+ * 
  * 
  * @copyright KASalgado 2012
  * @author Kleber Salgado
@@ -10,7 +10,7 @@
 class FileVersion
 {
     /**
-     * Object to manage CSS files
+     * Load css version for files
      */
     private $css = array(
         'start' => 0,
@@ -19,7 +19,7 @@ class FileVersion
     );
 
     /**
-     * Object to manage JS files
+     * Load js version for files
      */
     private $js = array(
         'start' => 0,
@@ -28,8 +28,9 @@ class FileVersion
     );
 
     /**
-     * Retrieve the names of the files in a bidimensional array
-     * @return array $files
+     * 
+     * 
+     * @return array
      */
     public function get($class)
     {

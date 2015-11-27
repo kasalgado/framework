@@ -1,12 +1,13 @@
 <?php
 
 /**
- * This class contains utilities for the application
  * 
- * @copyright KASalgado 2012
+ * 
+ * @copyright KASalgado 2012 - 2015
  * @author Kleber Salgado
  * @version 1.1
  */
-class Utils {
+class Utils
+{
 	
 }

@@ -1,6 +1,9 @@
 <?php
 
-// This file is the most simple version of php magic function __autoload
+/**
+ * 
+ */
+
 require 'autoloader.php';
 
 // Set initial configuration

@@ -7,7 +7,7 @@
  * @author Kleber Salgado
  * @version 1.1
  */
-class Languages
+class Translation
 {
     const DEFAULT_CORE_FILE = 'core';
     const DEFAULT_PUBLIC_FILE = 'public';
@@ -33,7 +33,7 @@ class Languages
      * 
      * @return type
      */
-    public function setLanguages()
+    public function getTranslations()
     {
         $core = $this->xmlToArray(self::DEFAULT_CORE_FILE);
         $public = $this->xmlToArray(self::DEFAULT_PUBLIC_FILE);

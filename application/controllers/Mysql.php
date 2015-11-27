@@ -38,7 +38,7 @@ class Mysql extends Master
      */
     public function __construct()
     {
-        $languages = new Languages();
+        $languages = new Translation();
         $this->lang = $languages->getFromFile('classes', 'mysql');
         $this->db = MySQLQuery::getInstance();
         $this->loadResources('mysql');

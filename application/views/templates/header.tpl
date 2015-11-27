@@ -12,3 +12,4 @@
         <a href="{$basename|cat:'?ctr=contactIndex'}">{$lang_contact}</a>
     </li>
 </ul>
+

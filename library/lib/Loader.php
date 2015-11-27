@@ -151,8 +151,8 @@ class Loader {
      */
     private function setLangVars()
     {
-        $languages = new Languages();
-        $lang = $languages->setLanguages();
+        $languages = new Translation();
+        $lang = $languages->getTranslations();
 
         foreach ($lang as $key => $value) {
             $this->smarty->assign('lang_' . $key, $value);

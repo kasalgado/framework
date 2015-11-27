@@ -15,6 +15,9 @@
     <status><![CDATA[Estado]]></status>
     <enable><![CDATA[Activo]]></enable>
     <disable><![CDATA[Inactivo]]></disable>
+    <english><![CDATA[en]]></english>
+    <spanish><![CDATA[es]]></spanish>
+    <german><![CDATA[de]]></german>
     
     <firstname><![CDATA[Nombre]]></firstname>
     <lastname><![CDATA[Apellido]]></lastname>

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 
+ * This class prepares the necessary information for routing
  * 
  * @copyright KASalgado 2012 - 2015
  * @author Kleber Salgado
@@ -10,17 +10,20 @@
 class Dispatcher
 {
     /**
-     * Save class name
+     * Load class name
      */
     private $class;
 
     /**
-     * Save template name
+     * Load template name
      */
     private $template;
 
     /**
-     * Set the path, class name and method name
+     * Fetch controller and method name from the url information
+     * 
+     * @param array $params
+     * @return array $data
      */
     public function setController($params)
     {
@@ -43,7 +46,10 @@ class Dispatcher
     }
 
     /**
-     * Set the path and template name
+     * Set template name and path
+     * 
+     * @return string $template
+     * @throws Exception
      */
     public function loadTemplate()
     {

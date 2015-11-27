@@ -3,28 +3,28 @@
 /**
  * 
  * 
- * @copyright KASalgado 2010 - 2015
+ * @copyright KASalgado 2012 - 2015
  * @author Kleber Salgado
  * @version 1.2
  */
 class FormValidate
 {
     /**
-     *
+     * Load language translations
      * 
      * @var type 
      */
     private $lang;
     
     /**
-     *
+     * Hold data information from controller
      * 
      * @var type 
      */
     private $data;
     
     /**
-     *
+     * Hold validation parameters for form
      * 
      * @var type 
      */
@@ -37,7 +37,7 @@ class FormValidate
      */
     public function __construct(array $data)
     {
-        $languages = new Languages();
+        $languages = new Translation();
         $this->lang = $languages->getFromFile('core', 'form_errors');
         $this->data = $data;
     }

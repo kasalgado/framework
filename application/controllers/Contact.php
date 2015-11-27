@@ -35,7 +35,7 @@ class Contact extends Master
     public function __construct()
     {
         $this->loadResources('start');
-        $languages = new Languages();
+        $languages = new Translation();
         $this->lang = $languages->getFromFile('classes', 'contact');
     }
 
