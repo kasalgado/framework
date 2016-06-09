@@ -1,7 +1,8 @@
 <?php
 
 /**
- * This class prepares the necessary information for routing
+ * This class prepares the necessary information for routing like controller
+ * and template name
  * 
  * @copyright KASalgado 2012 - 2015
  * @author Kleber Salgado

@@ -1,7 +1,8 @@
 <?php
 
 /**
- * 
+ * This is a simple validation class that retrieves information from a
+ * predefined configuration and switch the corresponding action
  * 
  * @copyright KASalgado 2012 - 2015
  * @author Kleber Salgado
@@ -31,7 +32,7 @@ class FormValidate
     private $validate = array();
     
     /**
-     * 
+     * Prepare local variable enviroment
      * 
      * @param array $data
      */
@@ -43,7 +44,7 @@ class FormValidate
     }
     
     /**
-     * 
+     * Switch and acction according to the validation
      * 
      * @param array $data
      */
