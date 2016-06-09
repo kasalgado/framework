@@ -10,6 +10,7 @@ CONTENTS OF THIS FILE
  * Maintainers
 
 
+
 INTRODUCTION
 ------------
 
@@ -20,5 +21,11 @@ personal web sites, however could be used for mittle applications as well.
 I have tried to write an easy readable code as I could. It could be easy extanded and escaled.
 
 
+
 REQUIREMENTS
+------------
+- PHP 5.*
+
+
+INSTALLATION
 ------------
