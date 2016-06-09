@@ -15,6 +15,7 @@ This is an small self programmed framework based on PHP and the Template Machine
 
 I have tried to write an easy readable code as I could. It could be easy extanded and escaled.
 
+
 REQUIREMENTS
 ------------
 - PHP 5.*
@@ -23,6 +24,7 @@ REQUIREMENTS
 INSTALLATION
 ------------
 You only need to copy the complete framework folder into your project. You can change the name of the folder as your needs.
+
 
 CONFIGURATION
 -------------
