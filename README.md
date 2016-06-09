@@ -8,6 +8,7 @@ CONTENTS OF THIS FILE
  * FAQ
  * Maintainers
 
+
 INTRODUCTION
 ------------
 This is an small self programmed framework based on PHP and the Template Machine Smarty. It intends to give the possibility to use a PHP-Framework for small application, like personal web sites, however could be used for mittle applications as well.
