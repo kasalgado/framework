@@ -1,16 +1,24 @@
 <?php
 
 /**
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
  * 
- * 
- * @copyright KASalgado 2012
- * @author Kleber Salgado
+ * (c) Kleber Salgado <it@kasalgado.de>
  * @version 1.2
+ */
+
+/**
+ * The class FileVersion assigns file version of css and js files for their
+ * use in application.
+ * 
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 class FileVersion
 {
     /**
-     * Load css version for files
+     * Loads css version for files
      */
     private $css = array(
         'start' => 0,
@@ -19,7 +27,7 @@ class FileVersion
     );
 
     /**
-     * Load js version for files
+     * Loads js version for files
      */
     private $js = array(
         'start' => 0,
@@ -28,7 +36,7 @@ class FileVersion
     );
 
     /**
-     * 
+     * Returns files version as array.
      * 
      * @return array
      */

@@ -1,38 +1,45 @@
 <?php
 
 /**
- * This is a simple validation class that retrieves information from a
- * predefined configuration and switch the corresponding action
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
  * 
- * @copyright KASalgado 2012 - 2015
- * @author Kleber Salgado
+ * (c) Kleber Salgado <it@kasalgado.de>
  * @version 1.2
+ */
+
+/**
+ * This is a simple validation class that retrieves information from a
+ * predefined configuration and switch the corresponding action.
+ * 
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 class FormValidate
 {
     /**
-     * Load language translations
+     * Loads language translations.
      * 
-     * @var type 
+     * @var object 
      */
     private $lang;
     
     /**
-     * Hold data information from controller
+     * Holds data information from controller.
      * 
-     * @var type 
+     * @var array 
      */
     private $data;
     
     /**
-     * Hold validation parameters for form
+     * Holds validation parameters for form.
      * 
-     * @var type 
+     * @var array 
      */
     private $validate = array();
     
     /**
-     * Prepare local variable enviroment
+     * Prepares local variables enviroment.
      * 
      * @param array $data
      */
@@ -44,7 +51,7 @@ class FormValidate
     }
     
     /**
-     * Switch and acction according to the validation
+     * Switches an action according of the type validation.
      * 
      * @param array $data
      */
@@ -76,7 +83,7 @@ class FormValidate
     }
     
     /**
-     * 
+     * Prepares data validation for a required field type.
      * 
      * @param type $value
      */
@@ -89,9 +96,9 @@ class FormValidate
     }
     
     /**
+     * Prepares data validation for a email field type.
      * 
-     * 
-     * @param type $value
+     * @param string $value
      */
     public function email($value)
     {
@@ -102,9 +109,9 @@ class FormValidate
     }
     
     /**
+     * Prepares data validation for a text field type.
      * 
-     * 
-     * @param type $value
+     * @param string $value
      */
     public function text($value)
     {
@@ -115,9 +122,9 @@ class FormValidate
     }
     
     /**
+     * Prepares data validation for a select field type.
      * 
-     * 
-     * @param type $value
+     * @param string $value
      */
     public function select($value)
     {

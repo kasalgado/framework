@@ -1,27 +1,34 @@
 <?php
 
 /**
- * This class prepares the necessary information for routing like controller
- * and template name
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
  * 
- * @copyright KASalgado 2012 - 2015
- * @author Kleber Salgado
+ * (c) Kleber Salgado <it@kasalgado.de>
  * @version 1.2
+ */
+
+/**
+ * This class prepares the necessary information for routing. Assigns controller
+ * and template names
+ * 
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 class Dispatcher
 {
     /**
-     * Load class name
+     * Loads class name
      */
     private $class;
 
     /**
-     * Load template name
+     * Loads template name
      */
     private $template;
 
     /**
-     * Fetch controller and method name from the url information
+     * Sets controller and method name from the url information.
      * 
      * @param array $params
      * @return array $data
@@ -47,12 +54,12 @@ class Dispatcher
     }
 
     /**
-     * Set template name and path
+     * Sets template name.
      * 
      * @return string $template
      * @throws Exception
      */
-    public function loadTemplate()
+    public function setTemplate()
     {
         $template = $this->class . '/' . $this->template . '.tpl';
         

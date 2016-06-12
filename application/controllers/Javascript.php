@@ -3,14 +3,14 @@
 /**
  * 
  * 
- * @copyright KASalgado 2012 - 2015
+ * @copyright KASalgado 2013 - 2015
  * @author Kleber Salgado
  * @version 1.2
  */
 class Javascript extends Master
 {
     /**
-     * Load resources
+     * Loads resources
      */
     public function __construct()
     {

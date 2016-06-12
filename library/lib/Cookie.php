@@ -1,16 +1,23 @@
 <?php
 
 /**
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
+ * 
+ * (c) Kleber Salgado <it@kasalgado.de>
+ * @version 1.0
+ */
+
+/**
  * This class pretends to hide the common functions to work with cookies.
  * 
- * @copyright KASalgado 2012 - 2015
- * @author Kleber Salgado
- * @version 1.0
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 class Cookie
 {
     /**
-     * Set a cookie or an arrange of cookies specified for an array.
+     * Sets a cookie or an arrange of cookies specified by an array.
      * 
      * @param mix $type
      * @param string $data
@@ -28,7 +35,7 @@ class Cookie
     }
     
     /**
-     * Get a cookie value or an arrange of values within an array.
+     * Gets a cookie value or an arrange of values within an array.
      * 
      * @param mix $type
      * @return mix $value
@@ -51,7 +58,7 @@ class Cookie
     }
     
     /**
-     * Delete an specific cookie or an arrange of cookies within an array.
+     * Deletes an specific cookie or an arrange of cookies within an array.
      * 
      * @param mix $type
      */

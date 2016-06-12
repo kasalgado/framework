@@ -1,17 +1,23 @@
 <?php
 
 /**
- * This class tries to hide the elementare server variables to manage sessions
- * through simple functions.
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
  * 
- * @copyright KASalgado 2011 - 2015
- * @author Kleber Salgado
+ * (c) Kleber Salgado <it@kasalgado.de>
  * @version 1.0
+ */
+
+/**
+ * This class intends to hide server variables to manage sessions.
+ * 
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 class Session
 {
     /**
-     * 
+     * Checks if a session was already started.
      */
     public function __construct()
     {
@@ -21,10 +27,10 @@ class Session
     }
     
     /**
+     * Sets a session variable or a group of sessions variables.
      * 
-     * 
-     * @param type $type
-     * @param type $data
+     * @param mixed $type
+     * @param string $data
      */
     public function set($type, $data = '')
     {
@@ -38,10 +44,10 @@ class Session
     }
     
     /**
+     * Gets a session variable or a group of sessions variables.
      * 
-     * 
-     * @param type $type
-     * @return type
+     * @param mixed $type
+     * @return mixed $result
      */
     public function get($type)
     {
@@ -60,10 +66,10 @@ class Session
     }
     
     /**
+     * Checks if a session variable exists.
      * 
-     * 
-     * @param type $name
-     * @return type
+     * @param string $name
+     * @return bolean
      */
     public function exists($name)
     {
@@ -71,9 +77,9 @@ class Session
     }
     
     /**
+     * Deletes a session variable or a group of sessions variables.
      * 
-     * 
-     * @param type $type
+     * @param mixed $type
      */
     public function delete($type)
     {
@@ -87,7 +93,7 @@ class Session
     }
     
     /**
-     * 
+     * Deletes all session variables.
      */
     public function deleteAll()
     {
@@ -95,7 +101,7 @@ class Session
     }
     
     /**
-     * 
+     * Closes session.
      */
     public function destroy()
     {

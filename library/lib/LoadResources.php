@@ -1,16 +1,23 @@
 <?php
 
 /**
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
  * 
- * 
- * @copyright KASalgado 2012 - 2015
- * @author Kleber Salgado
+ * (c) Kleber Salgado <it@kasalgado.de>
  * @version 1.2
+ */
+
+/**
+ * This class loads all necessary resources to work in the application.
+ * 
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 class LoadResources
 {
     /**
-     * 
+     * Searches for all css files and creates a unique html string.
      * 
      * @return string $html
      */
@@ -25,7 +32,7 @@ class LoadResources
     }
 
     /**
-     * 
+     * Searches for all js files and creates a unique html string.
      * 
      * @return string $html
      */
@@ -44,10 +51,10 @@ class LoadResources
     }
 
     /**
+     * Searches for an specified js file, located at the app folder.
      * 
-     * 
-     * @param type $class
-     * @param type $version
+     * @param string $class
+     * @param string $version
      * @return string $html
      */
     public function jsApp($class, $version)
@@ -60,10 +67,10 @@ class LoadResources
     }
 
     /**
+     * Searches for an specified css file, located at the app folder.
      * 
-     * 
-     * @param type $class
-     * @param type $version
+     * @param string $class
+     * @param string $version
      * @return string $html
      */
     public function cssApp($class, $version)

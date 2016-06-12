@@ -1,18 +1,18 @@
 <?php
 
 /**
+ * This class shows an example how to manage a form creation and its validation.
  * 
- * 
- * @copyright KASalgado 2012 - 2015
+ * @copyright KASalgado 2013 - 2015
  * @author Kleber Salgado
  * @version 1.2
  */
 class Contact extends Master
 {
     /**
-     * Hold fields for validate form
+     * Holds field types for validating.
      * 
-     * @var type 
+     * @var array 
      */
     private $validate = array(
         'firstname' => 'text',
@@ -23,14 +23,14 @@ class Contact extends Master
     );
     
     /**
-     *
+     * Loads object translation.
      * 
-     * @var type 
+     * @var object 
      */
     private $lang;
     
     /**
-     * Load the necessary resources for this page
+     * Loads the necessary resources for this page
      */
     public function __construct()
     {
@@ -40,9 +40,9 @@ class Contact extends Master
     }
 
     /**
+     * Creates form validation.
      * 
-     * 
-     * @return type
+     * @return array $result
      */
     public function index($data)
     {

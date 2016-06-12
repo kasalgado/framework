@@ -1,18 +1,25 @@
 <?php
 
 /**
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
  * 
- * 
- * @copyright KASalgado 2012 - 2015
- * @author Kleber Salgado
+ * (c) Kleber Salgado <it@kasalgado.de>
  * @version 1.1
+ */
+
+/**
+ * This class initializes the Smarty Machine Engine.
+ * 
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 class SmartyMachine
 {
     /**
+     * Starts Smarty.
      * 
-     * 
-     * @return \Smarty
+     * @return object \Smarty
      */
     public function loadSmarty()
     {

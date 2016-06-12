@@ -1,30 +1,37 @@
 <?php
 
 /**
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
  * 
- * 
- * @copyright KASalgado 2011 - 2015
- * @author Kleber Salgado
+ * (c) Kleber Salgado <it@kasalgado.de>
  * @version 1.0
+ */
+
+/**
+ * The class Loader prepares data information to assign in templates.
+ * 
+ * @copyright KASalgado 2014 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 class Loader {
     
     /**
-     *
+     * Loads Smarty object
      * 
-     * @var type 
+     * @var object
      */
     private $smarty;
     
     /**
-     *
+     * Loads Vars class
      * 
-     * @var type 
+     * @var object
      */
     private $vars;
     
     /**
-     * 
+     * Starts assigning classes into properties
      */
     public function __construct()
     {
@@ -34,7 +41,9 @@ class Loader {
     }
 
     /**
+     * Gets http or ajax template according to request and assign variables.
      * 
+     * @return avoid
      */
     public function get() {
         $this->smarty->assign('basename', APPLICATION_BASENAME);
@@ -50,16 +59,16 @@ class Loader {
             }
         } else {
             $this->loadResources();
-            $this->smarty->display($this->getTemplate());
+            $this->smarty->display($this->getHttpTemplate());
         }
     }
     
     /**
-     * 
+     * Gets http template and assign variables.
      * 
      * @return string
      */
-    private function getTemplate()
+    private function getHttpTemplate()
     {
         $data = array('ctr' => 'startIndex');
 
@@ -78,14 +87,10 @@ class Loader {
         $dispatcher = new Dispatcher();
         $controller = $dispatcher->setController($data);
 
-        // Create variables to assign CSS and JS resources
         $this->smarty->assign('jsApp', $controller['js']);
         $this->smarty->assign('cssApp', $controller['css']);
+        $this->smarty->assign('template', $dispatcher->setTemplate());
 
-        // Create variable to assign the template
-        $this->smarty->assign('template', $dispatcher->loadTemplate());
-
-        // Assign variables which are passed as parameters
         if ($controller['vars']) {
             foreach ($controller['vars'] as $key => $value) {
                 $this->smarty->assign($key, $value);
@@ -96,9 +101,9 @@ class Loader {
     }
     
     /**
+     * Gets Ajax emplate and assign variables.
      * 
-     * 
-     * @return type
+     * @return array
      * @throws Exception
      */
     private function getAjaxTemplate()
@@ -110,7 +115,6 @@ class Loader {
         $dispatcher = new Dispatcher();
         $controller = $dispatcher->setController($data);
 
-        // Assign variables for the template
         if ($controller['vars']) {
             foreach ($controller['vars'] as $key => $value) {
                 $this->smarty->assign($key, $value);
@@ -121,7 +125,7 @@ class Loader {
             if ($data['response'] == 'html') {
                 return array(
                     'response' => 'html',
-                    'data' => $dispatcher->loadTemplate(),
+                    'data' => $dispatcher->setTemplate(),
                 );
             } elseif ($data['response'] == 'json') {
                 return array(
@@ -137,7 +141,7 @@ class Loader {
     }
     
     /**
-     * 
+     * Assigns resources into Smarty global object.
      */
     private function loadResources()
     {
@@ -147,7 +151,7 @@ class Loader {
     }
     
     /**
-     * 
+     * Assigns language translation values into the Smarty global object.
      */
     private function setLangVars()
     {

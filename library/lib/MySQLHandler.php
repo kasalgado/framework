@@ -1,19 +1,25 @@
 <?php
 
 /**
- * This class creates an DB connection object. 
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
  * 
- * @copyright KASalgado 2012
- * @author Kleber Salgado
- * @version 1.0
+ * (c) Kleber Salgado <it@kasalgado.de>
+ * @version 1.1
+ */
+
+/**
+ * This class creates an DB connection object. It manages two handlers.
+ * 
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 abstract class MySQLHandler
 {
     /**
-     * Create a MySQL connection through a PDO handler. The conection parameters
-     * are obtained from enviroment variables, defined already in setup file.
+     * Creates a MySQL connection through out a PDO handler.
      * 
-     * @return $conn contains the conection object
+     * @return object $conn
      */
     protected function PDO_MySQL()
     {
@@ -31,15 +37,15 @@ abstract class MySQLHandler
     }
 
     /**
-     * Create an SQLite connection through a PDO handler. The database name
-     * is obtained from enviroment variables, defined already in setup file.
+     * Create an SQLite connection through out a PDO handler.
      * 
-     * @return $conn contains the conection object
+     * @return object $conn
      */
     protected function PDO_SQLite()
     {
         try {
-            $conn = new PDO('sqlite::' . APPLICATION_PATH . '/models/' . APPLICATION_SQLITE_DB . '.sqlite');
+            $conn = new PDO('sqlite::' . APPLICATION_PATH . '/models/'
+                . APPLICATION_SQLITE_DB . '.sqlite');
 
             return $conn;
         } catch (PDOException $e) {

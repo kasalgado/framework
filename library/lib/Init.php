@@ -1,22 +1,29 @@
 <?php
 
 /**
- * The class Init sets initial configuration up for application
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
  * 
- * @copyright KASalgado 2011 - 2015
- * @author Kleber Salgado
+ * (c) Kleber Salgado <it@kasalgado.de>
  * @version 1.0
+ */
+
+/**
+ * The class Init sets initial configuration for application up.
+ * 
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 class Init
 {
     const DEFAULT_LANG = 'es';
     
     /**
-     * Set config variables for the application
+     * Sets config variables for the application.
      */
     public function setup()
     {
-        $xml = new XMLImport();
+        $xml = new XmlContent();
         $params = $xml->getContent('setup/config.xml');
         $setup = $params[APPLICATION_ENVIRONMENT];
         
@@ -32,7 +39,7 @@ class Init
     }
     
     /**
-     * 
+     * Sets initial language configuration for global use.
      */
     public function setLang()
     {

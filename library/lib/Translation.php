@@ -1,11 +1,19 @@
 <?php
 
 /**
+ * This file is part of an open source framework. The file could be used
+ * or modified free of charge.
  * 
- * 
- * @copyright KASalgado 2012 - 2015
- * @author Kleber Salgado
+ * (c) Kleber Salgado <it@kasalgado.de>
  * @version 1.1
+ */
+
+/**
+ * The class Translation fetches translation strings from XML files and
+ * returns them as array.
+ * 
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  */
 class Translation
 {
@@ -14,14 +22,14 @@ class Translation
     const DEFAULT_FILE_EXTENSION = 'xml';
     
     /**
-     *
+     * Loads a session.
      * 
      * @var object
      */
     private $session;
     
     /**
-     * 
+     * Starts a session.
      */
     public function __construct()
     {
@@ -29,9 +37,9 @@ class Translation
     }
     
     /**
+     * Fetches public and core translations.
      * 
-     * 
-     * @return type
+     * @return array $lang
      */
     public function getTranslations()
     {
@@ -47,10 +55,10 @@ class Translation
     }
 
     /**
+     * Fetches translations from an specified file.
      * 
-     * 
-     * @param type $file
-     * @param type $child
+     * @param string $file
+     * @param string $child
      * @return \stdClass
      * @throws Exception
      */
@@ -79,10 +87,10 @@ class Translation
     }
 
     /**
+     * Converts data from an object into an array.
      * 
-     * 
-     * @param type $name
-     * @return type
+     * @param string $name
+     * @return array
      */
     private function xmlToArray($name)
     {
