@@ -4,7 +4,7 @@
  * This class shows an example how to manage a form creation and its validation.
  * 
  * @copyright KASalgado 2013 - 2015
- * @author Kleber Salgado
+ * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.2
  */
 class Contact extends Master

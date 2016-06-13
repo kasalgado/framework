@@ -1,14 +1,19 @@
 <?php
 
 /**
+ * This class only acts as a dummy class to hold SQL queries for table creation.
  * 
- * 
- * @copyright KASalgado 2012 - 2015
- * @author Kleber Salgado
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.2
  */
 class Create
 {
+    /**
+     * Collects queries to be executed from console.
+     * 
+     * @return string
+     */
     public static function Run()
     {
         $tables = array(
@@ -20,7 +25,7 @@ class Create
     }
     
     /**
-     * Create User example table
+     * Creates User sample table.
      * 
      * @return string $query
      */
@@ -38,7 +43,7 @@ class Create
     }
     
     /**
-     * Create Info example table
+     * Creates Info sample table.
      * 
      * @return string $query
      */

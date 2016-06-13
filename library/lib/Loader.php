@@ -46,7 +46,7 @@ class Loader {
      * @return avoid
      */
     public function get() {
-        $this->smarty->assign('basename', APPLICATION_BASENAME);
+        $this->setLinkVars();
         $this->setLangVars();
         
         if ($this->vars->get('ctr') && $this->vars->get('ctr') == 'ajaxCommander') {
@@ -141,7 +141,7 @@ class Loader {
     }
     
     /**
-     * Assigns resources into Smarty global object.
+     * Assigns resources as variables into Smarty global object.
      */
     private function loadResources()
     {
@@ -151,7 +151,21 @@ class Loader {
     }
     
     /**
-     * Assigns language translation values into the Smarty global object.
+     * Assigns link paths as variables into Smarty global object.
+     */
+    private function setLinkVars()
+    {
+        $uri = basename($_SERVER['REQUEST_URI']);
+        $parts = explode('?', $uri);
+        
+        $self = count($parts) > 1 ? $uri . '&' : APPLICATION_BASENAME . '?';
+        
+        $this->smarty->assign('self', $self);
+        $this->smarty->assign('basename', APPLICATION_BASENAME);
+    }
+    
+    /**
+     * Assigns translation values as variables into the Smarty global object.
      */
     private function setLangVars()
     {

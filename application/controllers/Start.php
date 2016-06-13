@@ -1,16 +1,16 @@
 <?php
 
 /**
- * This class manages the index page in the application
+ * This class manages the index page in the application.
  * 
- * @copyright KASalgado 2012
- * @author Kleber Salgado
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.2
  */
 class Start extends Master
 {
     /**
-     * Load the necessary resources for this page
+     * Loads the necessary resources for this page.
      */
     public function __construct()
     {
@@ -18,7 +18,7 @@ class Start extends Master
     }
 
     /**
-     * 
+     * Assigns variables for template.
      * 
      * @return array
      */

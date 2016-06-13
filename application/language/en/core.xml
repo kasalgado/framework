@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <core>
-    <default>
-        <web_title><![CDATA[Web title]]></web_title>
-        <head_titel><![CDATA[HTML title]]></head_titel>
-        <head_description><![CDATA[HTML description]]></head_description>
-        <head_keywords><![CDATA[HTML keywords]]></head_keywords>
-        <head_lang><![CDATA[HTML language]]></head_lang>
-        
-        <monday><![CDATA[Monday]]></monday>
-        <tuesday><![CDATA[Tuesdas]]></tuesday>
-        <wednesday><![CDATA[Wednesday]]></wednesday>
-        <thursday><![CDATA[Thursday]]></thursday>
-        <friday><![CDATA[Friday]]></friday>
-        <saturday><![CDATA[Saturday]]></saturday>
-        <sunday><![CDATA[Sunday]]></sunday>
+    <web_title><![CDATA[Web title]]></web_title>
+    <head_titel><![CDATA[HTML title]]></head_titel>
+    <head_description><![CDATA[HTML description]]></head_description>
+    <head_keywords><![CDATA[HTML keywords]]></head_keywords>
+    <head_lang><![CDATA[HTML language]]></head_lang>
+    <copyright><![CDATA[@Copyright <a href="http://www.kasalgado.de" target="_blank">KASalgado</a> 2013 - 2015]]></copyright>
 
-        <january><![CDATA[January]]></january>
-        <february><![CDATA[February]]></february>
-        <march><![CDATA[March]]></march>
-        <april><![CDATA[April]]></april>
-        <may><![CDATA[May]]></may>
-        <june><![CDATA[June]]></june>
-        <july><![CDATA[July]]></july>
-        <august><![CDATA[August]]></august>
-        <september><![CDATA[September]]></september>
-        <october><![CDATA[October]]></october>
-        <november><![CDATA[November]]></november>
-        <december><![CDATA[December]]></december>
-    </default>
+    <new><![CDATA[New]]></new>
+    <submit><![CDATA[Send]]></submit>
+    <add><![CDATA[Add]]></add>
+    <username><![CDATA[User]]></username>
+    <status><![CDATA[State]]></status>
+    <enable><![CDATA[Active]]></enable>
+    <disable><![CDATA[Inactive]]></disable>
+    <english><![CDATA[en]]></english>
+    <spanish><![CDATA[es]]></spanish>
+    <german><![CDATA[de]]></german>
+    
+    <firstname><![CDATA[First name]]></firstname>
+    <lastname><![CDATA[Last name]]></lastname>
+    <email><![CDATA[Email]]></email>
+    <phone><![CDATA[Phone]]></phone>
+    <subject><![CDATA[Subject]]></subject>
+    <text><![CDATA[Text]]></text>
+    <success><![CDATA[Form was sent successfully]]></success>
+    
+    <form_errors>
+        <empty><![CDATA[This field could not be empty]]></empty>
+        <email><![CDATA[The email format is not correct]]></email>
+        <text><![CDATA[This value must be not contain numbers]]></text>
+        <select><![CDATA[You must select a value]]></select>
+    </form_errors>
 </core>

@@ -1,10 +1,10 @@
 <?php
 
 /**
- * 
+ * This class shows how can JavaScript be implemented in an application.
  * 
  * @copyright KASalgado 2013 - 2015
- * @author Kleber Salgado
+ * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.2
  */
 class Javascript extends Master
@@ -18,7 +18,8 @@ class Javascript extends Master
     }
 
     /**
-     * 
+     * Assigns variables to be used in Template. The js variable assigns
+     * variables to be used direct in .js files.
      * 
      * @return array
      */
@@ -34,7 +35,7 @@ class Javascript extends Master
     }
     
     /**
-     * 
+     * Assigns variables to be used as json format.
      * 
      * @param array $data
      * @return array $vars
@@ -49,7 +50,7 @@ class Javascript extends Master
     }
     
     /**
-     * 
+     * Assigns variables to be used in template.
      * 
      * @param array $data
      * @return array $vars

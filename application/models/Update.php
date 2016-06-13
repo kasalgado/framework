@@ -1,16 +1,16 @@
 <?php
 
 /**
+ * This class only acts as a dummy class to hold SQL queries for table updating.
  * 
- * 
- * @copyright KASalgado 2012 - 2015
- * @author Kleber Salgado
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.2
  */
 class Update
 {
     /**
-     * 
+     * Collects queries to be executed from console.
      * 
      * @return string
      */
@@ -25,7 +25,7 @@ class Update
     }
     
     /**
-     * 
+     * Insterts a new user.
      * 
      * @return string $query
      */
@@ -38,7 +38,7 @@ class Update
     }
     
     /**
-     * 
+     * Inserts a new user.
      * 
      * @return string $query
      */

@@ -1,26 +1,31 @@
 <?php
 
 /**
+ * The Master class prepares the necessary resources which would be used
+ * in the application.
  * 
- * 
- * @copyright KASalgado 2012 - 2015
- * @author Kleber Salgado
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.1
  */
 abstract class Master
 {
     /**
-     * Create an object to save the additional JavaScript file
+     * Loads the additional JavaScript file.
+     * 
+     * @var object
      */
     public $js;
 
     /**
-     * Create an object to save the additional CSS file
+     * Loads the additional CSS file.
+     * 
+     * @var object
      */
     public $css;
 
     /**
-     * 
+     * Loads resources.
      * 
      * @param string $class
      */

@@ -1,16 +1,16 @@
 <?php
 
 /**
- * This class pretends to show some common functions to work with MySQL
+ * This class shows how to use some common functions to work with MySQL.
  * 
- * @copyright KASalgado 2012 - 2015
- * @author Kleber Salgado
+ * @copyright KASalgado 2013 - 2015
+ * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.2
  */
 class Mysql extends Master
 {
     /**
-     * Prepare fields for form validation
+     * Prepares fields for form validation.
      * 
      * @var array
      */
@@ -20,21 +20,21 @@ class Mysql extends Master
     );
     
     /**
-     * Load a MySQL instance
+     * Loads a MySQL instance.
      * 
      * @var object
      */
     private $db;
     
     /**
-     * Load a Languages instance
+     * Loads a Languages instance.
      * 
      * @var object
      */
     private $lang;
     
     /**
-     * Set necessary instances for this class
+     * Sets necessary instances for this class.
      */
     public function __construct()
     {
@@ -45,7 +45,7 @@ class Mysql extends Master
     }
 
     /**
-     * Fetch all rows from user
+     * Fetches all rows from user.
      * 
      * @return array
      */
@@ -65,7 +65,7 @@ class Mysql extends Master
     }
     
     /**
-     * Add a new user row
+     * Adds a new user row.
      * 
      * @return array $result
      */

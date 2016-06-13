@@ -16,7 +16,7 @@
  */
 class Init
 {
-    const DEFAULT_LANG = 'es';
+    const DEFAULT_LANG = 'en';
     
     /**
      * Sets config variables for the application.
@@ -46,6 +46,9 @@ class Init
         $session = new Session();
         $vars = new Vars();
         
-        $session->set('lang', $vars->get('lang') ? $vars->get('lang') : self::DEFAULT_LANG);
+        if (!$session->exists('lang') || $vars->get('lang')) {
+            $session->set('lang',
+                $vars->get('lang') ? $vars->get('lang') : self::DEFAULT_LANG);
+        }
     }
 }

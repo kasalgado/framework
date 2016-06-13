@@ -11,4 +11,5 @@
     <ajax_json><![CDATA[Usar Ajax con JSON]]></ajax_json>
     <ajax_html><![CDATA[Usar Ajax con HTML]]></ajax_html>
     <wellcome><![CDATA[Bienvenido]]></wellcome>
+    <web_content><![CDATA[Contenido del sitio....]]></web_content>
 </public>
