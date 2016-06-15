@@ -25,7 +25,7 @@ INSTALLATION
 ------------
 - Copy the complete framework folder into your project. You can change the name of the folder as your needs.
 - Install composer if you still don't have it.
-- Run <composer install>.
+- Run <i>composer install</i>.
 - Enjoy it.
 
 
