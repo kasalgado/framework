@@ -1,7 +1,8 @@
 nbproject/*
-application/views/templates_c/*
-application/views/cache/*
-application/views/configs/*
-library/Smarty/*
-application/utils/setup/config.xml
-/library/Smarty-2.6.28/
+src/Application/views/templates_c/*
+src/Application/views/cache/*
+src/Application/views/configs/*
+vendor/
+Library/Utils/Setup/config.xml
+composer.lock
+
