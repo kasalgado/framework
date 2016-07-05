@@ -135,10 +135,10 @@ class Loader {
                     'data' => json_encode($controller['vars']),
                 );
             } else {
-                throw new Exception('Ajax dataType must be html or json');
+                throw new \Exception('Ajax dataType must be html or json');
             }
         } else {
-            throw new Exception('response data must be given');
+            throw new \Exception('response data must be given');
         }
     }
     

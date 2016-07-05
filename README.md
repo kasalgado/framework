@@ -18,7 +18,7 @@ I have tried to write an easy readable code as I could. It could be easy extende
 
 REQUIREMENTS
 ------------
-- PHP 5.*
+- PHP 5.6.*
 
 
 INSTALLATION
