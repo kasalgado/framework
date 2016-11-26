@@ -13,7 +13,7 @@ namespace Lib;
 /**
  * Interface to create a Singleton pattern.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  */
 interface Singleton

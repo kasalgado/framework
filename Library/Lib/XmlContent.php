@@ -13,7 +13,7 @@ namespace Lib;
 /**
  * The class XmlContent retrives information as array from an specified xml file.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  */
 class XmlContent

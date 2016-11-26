@@ -9,7 +9,7 @@ use Lib\LoadResources;
  * The Master class prepares the necessary resources which would be used
  * in the application.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.1
  */

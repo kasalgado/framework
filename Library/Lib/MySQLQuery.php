@@ -15,7 +15,7 @@ namespace Lib;
  * design pattern and implements the Singleton design pattern. For the query
  * evaluation will be used prepared statements.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  */
 class MySQLQuery extends MySQLHandler implements Singleton

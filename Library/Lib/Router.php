@@ -13,7 +13,7 @@ namespace Lib;
 /**
  * The class Router executes routing processes.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  */
 class Router

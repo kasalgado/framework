@@ -13,7 +13,7 @@ namespace Lib;
 /**
  * The class Loader prepares data information to assign in templates.
  * 
- * @copyright KASalgado 2014 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  */
 class Loader {

@@ -9,7 +9,7 @@ use Lib\FormValidate;
 /**
  * This class shows an example how to manage a form creation and its validation.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.2
  */

@@ -14,7 +14,7 @@ namespace Lib;
  * The class Translation fetches translation strings from XML files and
  * returns them as array.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  */
 class Translation

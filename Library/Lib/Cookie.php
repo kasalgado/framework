@@ -13,7 +13,7 @@ namespace Lib;
 /**
  * This class pretends to hide the common functions to work with cookies.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  */
 class Cookie

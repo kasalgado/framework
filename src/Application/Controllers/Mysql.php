@@ -11,7 +11,7 @@ use Lib\Router;
 /**
  * This class shows how to use some common functions to work with MySQL.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.2
  */

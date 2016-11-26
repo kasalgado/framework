@@ -14,7 +14,7 @@ namespace Utils\App;
  * The class FileVersion assigns file version of css and js files for their
  * use in application.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  */
 class FileVersion

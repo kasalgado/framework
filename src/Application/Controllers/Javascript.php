@@ -5,7 +5,7 @@ namespace Application\Controllers;
 /**
  * This class shows how can JavaScript be implemented in an application.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  * @version 1.2
  */

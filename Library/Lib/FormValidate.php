@@ -14,7 +14,7 @@ namespace Lib;
  * This is a simple validation class that retrieves information from a
  * predefined configuration and switch the corresponding action.
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  */
 class FormValidate

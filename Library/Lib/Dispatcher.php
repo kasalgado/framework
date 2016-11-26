@@ -14,7 +14,7 @@ namespace Lib;
  * This class prepares the necessary information for routing. Assigns controller
  * and template names
  * 
- * @copyright KASalgado 2013 - 2015
+ * @copyright KASalgado 2011 - 2013
  * @author Kleber Salgado <it@kasalgado.de>
  */
 class Dispatcher
