@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<public>
+    <start><![CDATA[Home]]></start>
+    <javascript><![CDATA[JavaScript]]></javascript>
+    <mysql><![CDATA[MySQL]]></mysql>
+    <contact><![CDATA[Contact]]></contact>
+    
+    <toggle_hidden><![CDATA[Show / Hide]]></toggle_hidden>
+    <click_me><![CDATA[Click me]]></click_me>
+    <ajax_json><![CDATA[Use Ajax with JSON]]></ajax_json>
+    <ajax_html><![CDATA[Use Ajax with HTML]]></ajax_html>
+    <wellcome><![CDATA[Wellcome]]></wellcome>
+    <web_content><![CDATA[Your content....]]></web_content>
+</public>

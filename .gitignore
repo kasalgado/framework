@@ -1,0 +1,8 @@
+nbproject/*
+src/Application/views/templates_c/*
+src/Application/views/cache/*
+src/Application/views/configs/*
+vendor/
+Library/Utils/Setup/config.xml
+composer.lock
+

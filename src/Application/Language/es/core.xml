@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<core>
+    <web_title><![CDATA[Título del Web]]></web_title>
+    <head_titel><![CDATA[Título HTML]]></head_titel>
+    <head_description><![CDATA[Descripción HTML]]></head_description>
+    <head_keywords><![CDATA[Palabras claves HTML]]></head_keywords>
+    <head_lang><![CDATA[Lenguaje HTML]]></head_lang>
+    <copyright><![CDATA[@Copyright <a href="http://www.kasalgado.de" target="_blank">KASalgado</a> 2013 - 2015]]></copyright>
+
+    <new><![CDATA[Nuevo]]></new>
+    <submit><![CDATA[Enviar]]></submit>
+    <add><![CDATA[Anadir]]></add>
+    <username><![CDATA[Usuario]]></username>
+    <status><![CDATA[Estado]]></status>
+    <enable><![CDATA[Activo]]></enable>
+    <disable><![CDATA[Inactivo]]></disable>
+    <english><![CDATA[en]]></english>
+    <spanish><![CDATA[es]]></spanish>
+    <german><![CDATA[de]]></german>
+    
+    <firstname><![CDATA[Nombre]]></firstname>
+    <lastname><![CDATA[Apellido]]></lastname>
+    <email><![CDATA[Correo]]></email>
+    <phone><![CDATA[Teléfono]]></phone>
+    <subject><![CDATA[Asunto]]></subject>
+    <text><![CDATA[Texto]]></text>
+    <success><![CDATA[Formulario enviado con éxito]]></success>
+    
+    <form_errors>
+        <empty><![CDATA[Este campo no debe estar vacío]]></empty>
+        <email><![CDATA[El formato de correo está incorrecto]]></email>
+        <text><![CDATA[El valor debe ser solo caracteres alfabéticos]]></text>
+        <select><![CDATA[Debe seleccionar un valor]]></select>
+    </form_errors>
+</core>

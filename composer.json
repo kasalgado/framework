@@ -1,0 +1,17 @@
+{
+    "name": "kas/framework-standard-edition",
+    "license": "FREE",
+    "type": "project",
+    "description": "Framework for small applications",
+    "autoload": {
+        "psr-0": {
+            "Lib": "Library/",
+            "Utils": "Library/",
+            "Application": "src/"
+        }
+    },
+    "require": {
+        "smarty/smarty": "~2.6.28"
+    },
+    "minimum-stability": "stable"
+}

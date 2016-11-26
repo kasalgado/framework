@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<public>
+    <contact>
+        <subject><![CDATA[Wählen Sie ein Thema]]></subject>
+        <support><![CDATA[Frage]]></support>
+        <report><![CDATA[Reklamation]]></report>
+    </contact>
+    
+    <mysql>
+        <enable><![CDATA[Aktiv]]></enable>
+        <disable><![CDATA[Inaktiv]]></disable>
+    </mysql>
+</public>

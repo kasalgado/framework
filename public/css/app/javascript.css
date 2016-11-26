@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.col-sm-3 {
+    padding-left: 0;
+}
+
+.alert-info {
+    margin-top: 20px;
+}
