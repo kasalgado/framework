@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<public>
+    <production>
+        <server>localhost</server>
+        <username>root</username>
+        <password></password>
+        <db>framework</db>
+        <errors>0</errors>
+    </production>
+	
+    <development>
+        <server>localhost</server>
+        <username>root</username>
+        <password></password>
+        <db>framework_test</db>
+        <errors>1</errors>
+    </development>
+</public>
