@@ -14,6 +14,9 @@ like personal web sites, however could be used for mittle applications as well.
 The architecture of the framework is based on the MVC (Model View Controller) Design Pattern.
 
 I have tried to write an easy readable code as I could. It could be easy extended and maintained.
+An example of the framework can be found under the following link:
+
+http://framework.ecuador-apps.net/
 
 
 REQUIREMENTS
@@ -32,3 +35,4 @@ INSTALLATION
 CONFIGURATION
 -------------
 The only file to configure is the config.xml file. You can find this file at the folder Library/Utils/Setup.
+
